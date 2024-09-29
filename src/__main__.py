@@ -1,19 +1,12 @@
 from sys import argv
 from directoryManagement import have_png_files, get_png_files
-from input_output import menu_input
+from input_output import menu_input, argument_input
 
 
 def main():
+    file_directory_path = argument_input(argv)
 
-    file_directory_path = ""
-    if len(argv) < 2:
-        print("Please, type in the path to the files you want to work on.")
-    elif len(argv) > 2:
-        print("Too many arguments.")
-    else:
-        file_directory_path = argv[1]
-        print(f"\nWorking under the following path:\n{file_directory_path}\n")
-
+    # Verification if choses directory has no PNG files.
     if not have_png_files(file_directory_path):
         print("Chosen file has no PNG files.\n")
         return 1
