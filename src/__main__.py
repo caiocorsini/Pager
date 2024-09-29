@@ -7,7 +7,7 @@ from pdf_processing import generate_reader_pdf
 def main():
     file_directory_path = argument_input(argv)
 
-    # Verification if choses directory has no PNG files.
+    # Verification in case the chosen directory has no PNG files.
     if not have_png_files(file_directory_path):
         print("Chosen file has no PNG files.\n")
         return 1
