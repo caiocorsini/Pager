@@ -1,6 +1,7 @@
 from sys import argv
 from directory_management import have_png_files, get_png_files
 from input_output import menu_input, argument_input
+from pdf_processing import generate_reader_pdf
 
 
 def main():
@@ -12,11 +13,17 @@ def main():
         return 1
 
     png_file_list = get_png_files(file_directory_path)
-    choice = menu_input()
 
-    if choice == '0':
-        print("\nThanks for using my program!\n")
-        return 0
+    choice = 'a'
+    while choice != '0':
+        choice = menu_input()
+
+        if choice == '3':
+            generate_reader_pdf(png_file_list, file_directory_path)
+
+
+    print("\nThanks for using my program!\n")
+    return 0
 
 
 if __name__ == "__main__":
