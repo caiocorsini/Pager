@@ -1,5 +1,5 @@
 from sys import argv
-from directoryManagement import have_png_files, get_png_files
+from directory_management import have_png_files, get_png_files
 from input_output import menu_input, argument_input
 
 
