@@ -13,8 +13,8 @@ def take_input():
 # Basic menu to show to the user
 def show_menu():
     print("Select what you want to do:")
-    print("[1] Generate printable paired pdf file.")
-    print("[2] Generate separate printable paired pdf files.")
+    print("[1] Generate paired pages pdf file.")
+    print("[2] Generate separate paired pages pdf files.")
     print("[3] Generate reader pdf file.")
     print("[4] Help.")
     print("[0] Exit program.")
