@@ -21,7 +21,7 @@ def main():
         if choice == '1':
             generate_printable_pdf(png_file_list, file_directory_path)
 
-        if choice == '3':
+        if choice == '2':
             generate_reader_pdf(png_file_list, file_directory_path)
 
     print("\nThanks for using my program!\n")

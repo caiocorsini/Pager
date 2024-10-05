@@ -1,4 +1,6 @@
 import os
+import tkinter as tk
+from tkinter import filedialog
 
 
 # Takes user input and returns it
@@ -13,10 +15,9 @@ def take_input():
 # Basic menu to show to the user
 def show_menu():
     print("Select what you want to do:")
-    print("[1] Generate paired pages pdf file.")
-    print("[2] Generate separate paired pages pdf files.")
-    print("[3] Generate reader pdf file.")
-    print("[4] Help.")
+    print("[1] Paired pages.")
+    print("[2] Single pages")
+    print("[3] Help.")
     print("[0] Exit program.")
 
 
@@ -31,10 +32,10 @@ def menu_input():
 
 # Analyses the arguments written by the user
 def argument_input(argv):
-    file_directory_path = ""
     if len(argv) < 2:
-        print("\nPlease, type in the path to the files you want to work on.\n")
-        exit()
+        root = tk.Tk()
+        root.withdraw()  # User selects directory manually in case no path argument has been passed initially
+        return filedialog.askdirectory()
     elif len(argv) > 2:
         print("\nToo many arguments.\n")
         exit()
