@@ -6,7 +6,7 @@ from tkinter import filedialog
 # Takes user input and returns it
 def take_input():
     choice = input("Select your option: ")
-    if choice not in {'1', '2', '3', '4', '0'}:
+    if choice not in {'1', '2', '3', '0'}:
         print("\nInvalid option.\nChoose again.\n")
         return -1
     return choice
@@ -35,7 +35,7 @@ def argument_input(argv):
     if len(argv) < 2:
         root = tk.Tk()
         root.withdraw()  # User selects directory manually in case no path argument has been passed initially
-        return filedialog.askdirectory()
+        return tk.filedialog.askdirectory()
     elif len(argv) > 2:
         print("\nToo many arguments.\n")
         exit()

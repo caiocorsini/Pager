@@ -1,7 +1,9 @@
 from sys import argv
-from directory_management import have_png_files, get_png_files
-from input_output import menu_input, argument_input
-from pdf_processing import generate_reader_pdf, generate_printable_pdf
+import time
+
+from directory_management import get_png_files, have_png_files
+from input_output import argument_input, menu_input
+from pdf_processing import generate_printable_pdf, generate_reader_pdf
 
 
 def main():
@@ -18,13 +20,18 @@ def main():
     while choice != '0':
         choice = menu_input()
 
+        start_time = time.time()
         if choice == '1':
             generate_printable_pdf(png_file_list, file_directory_path)
 
         if choice == '2':
             generate_reader_pdf(png_file_list, file_directory_path)
 
-    print("\nThanks for using my program!\n")
+        if choice != '0':
+            end_time = time.time()
+            print(f"Runtime: {round(end_time - start_time,2)} seconds.\n")
+
+    print("\nThanks for using my program!")
     return 0
 
 
