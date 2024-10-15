@@ -2,6 +2,8 @@ import os
 import tkinter as tk
 from tkinter import filedialog
 
+# Directory that will be worked on can be chosen via GUI (tkinter) or via CLI (argv)
+
 
 # Takes user input and returns it
 def take_input():
@@ -30,8 +32,9 @@ def menu_input():
     return choice
 
 
-# Analyses the arguments written by the user
+# Analyses the arguments written by the user.
 def argument_input(argv):
+    # Choosing using GUI
     if len(argv) < 2:
         root = tk.Tk()
         root.withdraw()  # User selects directory manually in case no path argument has been passed initially
@@ -39,7 +42,7 @@ def argument_input(argv):
     elif len(argv) > 2:
         print("\nToo many arguments.\n")
         exit()
-    else:
+    else:  # Choosing using CLI
         if argv[1] == "current":
             file_directory_path = os.getcwd()
             print(f"\nWorking under the current working directory:\n{file_directory_path}\n")

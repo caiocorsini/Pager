@@ -18,15 +18,16 @@ def main():
 
     choice = 'a'
     while choice != '0':
-        choice = menu_input()
+        choice = menu_input()  # Takes input from user
 
-        start_time = time.time()
+        start_time = time.time()  # Starts counting the runtime
         if choice == '1':
             generate_printable_pdf(png_file_list, file_directory_path)
 
         if choice == '2':
             generate_reader_pdf(png_file_list, file_directory_path)
 
+        # Runtime is only shown if user used one of the functions of the program
         if choice != '0':
             end_time = time.time()
             print(f"Runtime: {round(end_time - start_time,2)} seconds.\n")
