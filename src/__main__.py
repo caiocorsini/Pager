@@ -32,7 +32,7 @@ def main():
             end_time = time.time()
             print(f"Runtime: {round(end_time - start_time,2)} seconds.\n")
 
-    print("\nThanks for using my program!")
+    print("\nThanks for using my program!\U0001F609")  # prints winking emoji
     return 0
 
 
