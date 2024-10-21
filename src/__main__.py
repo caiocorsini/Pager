@@ -1,5 +1,5 @@
 from sys import argv
-import time
+import time as t
 
 from directory_management import get_png_files, have_png_files
 from input_output import argument_input, menu_input
@@ -20,7 +20,7 @@ def main():
     while choice != '0':
         choice = menu_input()  # Takes input from user
 
-        start_time = time.time()  # Starts counting the runtime
+        start_time = t.time()  # Starts counting the runtime
         if choice == '1':
             generate_printable_pdf(png_file_list, file_directory_path)
 
@@ -29,12 +29,12 @@ def main():
 
         # Runtime is only shown if user used one of the functions of the program
         if choice != '0':
-            end_time = time.time()
-            print(f"Runtime: {round(end_time - start_time,2)} seconds.\n")
+            end_time = t.time()  # Time when the function stopped running
+            print(f"Runtime: {round(end_time - start_time,2)} seconds.\n")  # Prints runtime
 
     print("\nThanks for using my program!\U0001F609")  # prints winking emoji
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # Calls main function
     main()

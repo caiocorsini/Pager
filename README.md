@@ -8,11 +8,11 @@ ____
 - [Author](#Author)
 ____
 ### Installation
-1. Clone the repository. In case you don't have git installed, you can simply click the download button in Github.
+1. Clone the repository. In case you don't have git installed, you can simply click the download button in GitHub.
 ```
 git clone https://github.com/caiocorsini/Pager.git
 ```
-2. Install all non standard Python libraries using pip
+2. Install all non-standard Python libraries using pip
 ```
 pip install tkinter
 pip install PIL
@@ -25,9 +25,9 @@ python src
 ____
 ### Author
 Developer: **Caio Vinicius Corsini Filho** <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Also known as: **Demigod64** and **DinoMan64**
+Also known as: **Demigod64** and **DinoMan64**
 <br><br>
-Computer Science student at Mackenzie Presbiterian University, automation intern developer at IBM, biologist and amateur artist.
+Computer Science student at Mackenzie Presbyterian University, automation intern developer at IBM, biologist and amateur artist.
 
 #### Links:<br>
 - [Github](https://github.com/your-profile) <br>

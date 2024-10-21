@@ -3,10 +3,17 @@ import tkinter as tk
 from tkinter import filedialog
 
 # Directory that will be worked on can be chosen via GUI (tkinter) or via CLI (argv)
+# TODO maybe add red text in some parts like this print("\033[31mThis text is red!\033[0m")
 
 
 # Takes user input and returns it
 def take_input():
+    """
+    Takes numerical input from user and returns it.
+
+    Returns:
+        Choice as a numerical char, or -1 if it was an invalid option
+    """
     choice = input("Select your option: ")
     if choice not in {'1', '2', '3', '0'}:
         print("\nInvalid option.\nChoose again.\n")
@@ -14,8 +21,10 @@ def take_input():
     return choice
 
 
-# Basic menu to show to the user
 def show_menu():
+    """
+    Prints the menu.
+    """
     print("Select what you want to do:")
     print("[1] Paired pages.")
     print("[2] Single pages")
@@ -23,10 +32,15 @@ def show_menu():
     print("[0] Exit program.")
 
 
-# Shows menu and returns input. Uses two functions for that
 def menu_input():
+    """
+    Helper function to call the show_menu() and take_input() functions.
+
+    Returns:
+        User choice as a numerical char
+    """
     choice = -1
-    while choice == -1:
+    while choice == -1:  # -1 represents an invalid input
         show_menu()
         choice = take_input()
     return choice
@@ -34,6 +48,16 @@ def menu_input():
 
 # Analyses the arguments written by the user.
 def argument_input(argv):
+    """
+    Chooses which directory will be worked on. Via CLI (argv) or GUI.
+    If no argv is written, choice is going to be with GUI.
+
+    Args:
+        argv: CLI argument
+
+    Returns:
+        str: Directory path
+    """
     # Choosing using GUI
     if len(argv) < 2:
         root = tk.Tk()

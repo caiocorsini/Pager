@@ -58,7 +58,7 @@ def generate_reader_pdf(png_file_list, directory_path):
     Generates a reader file, that is, a file with multiple pages that contain only a single image each.
 
     Args:
-        png_file_list: List containing the paths of all image file names that will be processed..
+        png_file_list: List containing the paths of all image file names that will be processed.
         directory_path: path of the directory containing all images.
     """
     images = []
@@ -122,7 +122,7 @@ def generate_printable_pdf(png_file_list, directory_path):
     Customized so that the pages can be printed like a classic comic book.
 
     Args:
-        png_file_list: List containing the paths of all image file names that will be processed..
+        png_file_list: List containing the paths of all image file names that will be processed.
         directory_path: path of the directory containing all images.
     """
     paired_pages = []
